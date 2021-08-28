@@ -6,6 +6,7 @@ on:
       - main
   # 定时打卡
   schedule:
+    # - cron: * * * * *
     - cron: * * * * *
 
 env:
