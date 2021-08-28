@@ -6,8 +6,8 @@ on:
       - master
   # 定时打卡
   schedule:
-    # - cron: 0 6 * * 1-5
-    - cron: 20 17 * 8 *
+    - cron:  * * * * *
+    # - cron: 20 17 * 8 *
 
 env:
   SCKEY: ${{ secrets.SCKEY }}
