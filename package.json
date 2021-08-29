@@ -4,6 +4,9 @@
   "main": "index.js",
   "author": "xiaokinglong <xiaokinglong@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "start": "node ./src/index.js"
+  },
   "dependencies": {
     "axios": "^0.21.1",
     "dayjs": "^1.10.6",
