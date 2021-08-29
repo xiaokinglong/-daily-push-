@@ -1,26 +1,13 @@
 {
-  "name": "my-fund-push",
+  "name": "daily-push",
   "version": "1.0.0",
   "main": "index.js",
+  "author": "xiaokinglong <xiaokinglong@gmail.com>",
   "license": "MIT",
-  "author": "Cansiny0320",
-  "devDependencies": {
-    "@types/node": "^15.12.5",
-    "@types/qs": "^6.9.6",
-    "gts": "^3.1.0",
-    "nodemon": "^2.0.9",
-    "ts-node": "^10.0.0",
-    "typescript": "^4.3.5"
-  },
   "dependencies": {
     "axios": "^0.21.1",
+    "dayjs": "^1.10.6",
+    "ejs": "^3.1.6",
     "qs": "^6.10.1"
-  },
-  "scripts": {
-    "start": "ts-node src/index.ts",
-    "lint": "gts lint",
-    "clean": "gts clean",
-    "compile": "tsc",
-    "fix": "gts fix"
   }
 }
