@@ -2,6 +2,19 @@
   {
     "fundCode": "010058",
     "haveShare": 945.46,
-    "channel": "天弘基金"
+    "channel": "天弘基金",
+    "money": 1000
+  },
+  {
+    "fundCode": "420102",
+    "haveShare": 400,
+    "channel": "天弘基金",
+    "money": 500
+  },
+  {
+    "fundCode": "007748",
+    "haveShare": 80,
+    "channel": "天弘基金",
+    "money": 100
   }
 ]
