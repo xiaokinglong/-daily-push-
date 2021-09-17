@@ -31,6 +31,7 @@ function getMyFundDetail(list) {
         price: Expansion.GZ, // 当前价格
         changeRate: Expansion.GSZZL, // 变化率
         totalMoney,
+        money: item.money,
         channel: item.channel,
       };
       list.push(currentFound);
