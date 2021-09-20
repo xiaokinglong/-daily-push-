@@ -1,9 +1,9 @@
 const { readFileSync } = require("fs");
 const { resolve } = require("path");
 const axios = require("axios");
-const { stringify } = require("qs");
 const dayjs = require("dayjs");
 const ejs = require("ejs");
+const {sendMessage} = require("./sendWChat/index.js");
 
 const nowDay = dayjs().format("YYYY-MM-DD");
 
@@ -56,25 +56,12 @@ function parseMessage(list) {
   };
 }
 
-function sendMessage(text, desp) {
-  return axios.post(
-    `https://sc.ftqq.com/${SCKEY}.send`,
-    stringify({
-      text,
-      desp,
-    }),
-    {
-      headers: {
-        "Content-type": "application/x-www-form-urlencoded",
-      },
-    }
-  );
-}
+
 async function main() {
   const list = [];
   await getMyFundDetail(list);
   const { title, desc } = await parseMessage(list);
-  sendMessage(title, desc).then(res => {
+  sendMessage(title, desc, SCKEY).then(res => {
     console.log(res.data)
   })
 }
