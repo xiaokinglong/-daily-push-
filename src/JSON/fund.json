@@ -4,20 +4,33 @@
     "code": "010058",
     "haveShare": 1297.51,
     "channel": "天弘基金",
-    "money": 1400
+    "money": 1400,
+    "isBuy": true
   },
   {
     "title": "天弘永利债券B",
     "code": "420102",
     "haveShare": 407.96,
     "channel": "天弘基金",
-    "money": 500
+    "money": 500,
+    "isBuy": true
+
   },
   {
     "title": "天弘增强回报债券A",
     "code": "007128",
     "haveShare": 73.55,
     "channel": "天弘基金",
-    "money": 100
+    "money": 100,
+    "isBuy": true
+
+  },
+  {
+    "title": "招商中证白酒指数",
+    "code": "161725",
+    "haveShare": 0,
+    "channel": "天天基金",
+    "money": 0,
+    "isBuy": false
   }
 ]
