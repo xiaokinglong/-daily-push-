@@ -150,7 +150,8 @@ function calculate(fundInfo, haveShare, cost) {
 
 // note 处理获取的到的信息
 function parseMessage(info) {
-  const template = fs.readFileSync(`./template.ejs`);
+  const templatePath = path.join(__dirname, 'template.ejs')
+  const template = fs.readFileSync(templatePath);
   const DescItem = ejs.render(template.toString(), info);
   // console.log(DescItem);
   return DescItem;
