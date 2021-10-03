@@ -1,6 +1,7 @@
-import axios from "axios";
-import { stringify } from "qs";
-export function sendMessage(text, desp, SCKEY) {
+const axios = require("axios");
+const { stringify } = require("qs");
+
+function sendMessage(text, desp, SCKEY) {
   return axios.post(
     `https://sc.ftqq.com/${SCKEY}.send`,
     stringify({
@@ -15,3 +16,4 @@ export function sendMessage(text, desp, SCKEY) {
   );
 }
 
+module.exports = { sendMessage };

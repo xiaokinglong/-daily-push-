@@ -1,7 +1,6 @@
 {
   "name": "daily-push",
   "version": "1.0.0",
-  "type": "module",
   "main": "index.js",
   "author": "xiaokinglong <xiaokinglong@gmail.com>",
   "license": "MIT",

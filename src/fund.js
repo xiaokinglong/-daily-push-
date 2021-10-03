@@ -1,10 +1,10 @@
-import fs from "fs";
-import { resolve } from "path";
-import axios from "axios";
-import cheerio from "cheerio";
-import ejs from "ejs";
-import { create, all, unit } from "mathjs";
-import { config } from "./config.js";
+const fs = require("fs");
+const path = require("path");
+const axios = require("axios");
+const cheerio = require("cheerio");
+const ejs = require("ejs");
+const { create, all, unit } = require("mathjs");
+const { config } = require("./config.js");
 
 // 初始化 mathjs
 const mathjs = create(all, config.numberRange);
@@ -18,7 +18,6 @@ function getFundsData() {
       const { code, haveShare, money, title } = jsonData[index];
       // const link = `https://fundmobapi.eastmoney.com/FundMApi/FundVarietieValuationDetail.ashx?FCODE=${code}&deviceid=D03E8A22-9E0A-473F-B045-3745FC7931C4&plat=Iphone&product=EFund&version=6.2.9`;
       const link = `http://fund.eastmoney.com/${code}.html`;
-      console.log(link);
       // try {
       const result = await axios.get(link);
       // console.log(result.data);
@@ -156,4 +155,5 @@ function parseMessage(info) {
   return DescItem;
 }
 
-export default getFundsData;
+
+module.exports = getFundsData

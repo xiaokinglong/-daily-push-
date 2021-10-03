@@ -1,7 +1,7 @@
-import dayjs from "dayjs";
-
+const dayjs = require("dayjs");
 const currentDay = dayjs().format("YYYY-MM-DD");
-export const config = {
+
+const config = {
   SCKEY: process.env.SCKEY,
   currentDay: currentDay,
   numberRange: {
@@ -10,3 +10,5 @@ export const config = {
     precision: 20,
   },
 };
+
+module.exports = { config };

@@ -1,13 +1,10 @@
-import { readFileSync } from "fs";
-import { resolve } from "path";
-import ejs from "ejs";
-import { sendMessage } from "./sendWChat/index.js";
-import { config } from "./config.js";
+const {  sendMessage }  =  require("./sendWChat/index.js")
+const {  config }  =  require("./config.js")
+const getFundsData  =  require("./fund.js")
 
-import getFundsData from "./fund.js";
 async function main() {
   const info = await getFundsData();
-  sendMessage(config.currentDay, info, config.SCKEY);
+  sendMessage(config.currentDay, info, config.SCKEY).then((value) => {console.log(value);});
 }
 
 main();
