@@ -12,7 +12,8 @@ const mathjs = create(all, config.numberRange);
 function getFundsData() {
   return new Promise(async (resolve, reject) => {
     // 读取读取拥有基金的数据
-    const jsonData = JSON.parse(fs.readFileSync("./JSON/fund.json", "utf8"));
+    const jsonPath = path.join(__dirname, 'JSON/fund.json');
+    const jsonData = JSON.parse(fs.readFileSync(jsonPath, "utf8"));
     let fundsInfo = "";
     for (let index = 0; index < jsonData.length; index++) {
       const { code, haveShare, money, title } = jsonData[index];
