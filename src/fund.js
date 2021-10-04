@@ -5,7 +5,7 @@ const cheerio = require("cheerio");
 const ejs = require("ejs");
 const { create, all, unit } = require("mathjs");
 const { config } = require("./config.js");
-
+const saveData = require("./saveData.js");
 // 初始化 mathjs
 const mathjs = create(all, config.numberRange);
 // 获取基金数据
@@ -21,7 +21,6 @@ function getFundsData() {
       const link = `http://fund.eastmoney.com/${code}.html`;
       // try {
       const result = await axios.get(link);
-      // console.log(result.data);
       const fundInfo = html2Object(result.data, haveShare, code);
 
       const calculateInfo = calculate(fundInfo, haveShare, money);
@@ -150,6 +149,9 @@ function calculate(fundInfo, haveShare, cost) {
 
 // note 处理获取的到的信息
 function parseMessage(info) {
+  console.log(info);
+  // 保存数据
+  saveData(info)
   const templatePath = path.join(__dirname, 'template.ejs')
   const template = fs.readFileSync(templatePath);
   const DescItem = ejs.render(template.toString(), info);
