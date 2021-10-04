@@ -14,7 +14,6 @@
     "channel": "天弘基金",
     "money": 500,
     "isBuy": true
-
   },
   {
     "title": "天弘增强回报债券A",
@@ -23,11 +22,34 @@
     "channel": "天弘基金",
     "money": 100,
     "isBuy": true
-
   },
   {
     "title": "招商中证白酒指数",
     "code": "161725",
+    "haveShare": 0,
+    "channel": "天天基金",
+    "money": 0,
+    "isBuy": false
+  },
+  {
+    "title": "易方达优质精选混合(QDII)",
+    "code": "110011",
+    "haveShare": 0,
+    "channel": "天天基金",
+    "money": 0,
+    "isBuy": false
+  },
+  {
+    "title": "交银养老2035三年(FOF)",
+    "code": "008697",
+    "haveShare": 0,
+    "channel": "天天基金",
+    "money": 0,
+    "isBuy": false
+  },
+  {
+    "title": "农银新能源主题",
+    "code": "002190",
     "haveShare": 0,
     "channel": "天天基金",
     "money": 0,
