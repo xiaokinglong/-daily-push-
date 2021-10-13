@@ -5,7 +5,7 @@ const cheerio = require("cheerio");
 const ejs = require("ejs");
 const { create, all, unit } = require("mathjs");
 const { config } = require("./config.js");
-const saveData = require("./saveData.js");
+// const saveData = require("./saveData.js");
 // 初始化 mathjs
 const mathjs = create(all, config.numberRange);
 // 获取基金数据
@@ -151,7 +151,7 @@ function calculate(fundInfo, haveShare, cost) {
 function parseMessage(info) {
   console.log(info);
   // 保存数据
-  saveData(info)
+  // saveData(info)
   const templatePath = path.join(__dirname, 'template.ejs')
   const template = fs.readFileSync(templatePath);
   const DescItem = ejs.render(template.toString(), info);
